@@ -4,12 +4,16 @@ class enemy {
   double pos[] = double[2];
   double vel[] = double[2];
   double rot;
-  public enemy(int motion, int ski, double possitions[], double vels[], rota) {
+  double start[] = double[2];
+  public enemy(int motion, int ski, double possitions[],) {
     motion_type= motion;
     skin = ski;
     pos = possitions;
-    vel = vels;
-    rot = rota;
+    vel[0] = 0;
+    vel[1] = 0;
+    rot = 0;
+    start = pos;
+    d = 0
   }
   public void update() {
     pos[0] = pos[0] + vel[0];
@@ -23,10 +27,71 @@ class enemy {
       case 0:
         dist[0] = x - pos[0];
         dist[1] = y - pos[1];
-        arctan v = new arctan(dist[1], dist[0]);
-        double rotation = v.get_result();
-        vel[0] = 5 * Math.sin(rotation);
-        vel[1] = 5 * Math.cos(rotation);
+        if (Math.sqrt(dist[0]*dist[0] + dist[1] * dist[1])) < 100){
+          arctan v = new arctan(dist[1], dist[0]);
+          double rotation = v.get_result();
+          vel[0] = 5 * Math.sin(rotation);
+          vel[1] = 5 * Math.cos(rotation);
+        }
+        break;
+      case 1:
+        if (d==0){
+          vel[0] = 5;
+          vel[1] = 0;
+          if (pos[0] - start[0] >= 20) {
+            d = 1;
+          }
+        }else{
+          vel[0] = -5;
+          vel[1] = 0;
+          if (pos[0] - start[0] <= 0) {
+            d = 0;
+          }
+        }
+        break;
+      case 2:
+        if (d==0){
+          vel[0] = 0;
+          vel[1] = 5;
+          if (pos[1] - start[1] >= 20) {
+            d = 1;
+          }
+        }else{
+          vel[0] = 0;
+          vel[1] = -5;
+          if (pos[1] - start[1] <= 0) {
+            d = 0;
+          }
+        }
+        break;
+      case 3:
+        if (d==0) {
+          vel[0] = 5;
+          vel[1] = 0;
+          if (pos[0] - start[0] >= 20) {
+            d = 1;
+          }
+        }else if (d==1) {
+          vel[0] = 0;
+          vel[1] = 5;
+          if (pos[1] - start[1] >= 20) {
+            d =2;
+          }
+        }else if (d==2) {
+          vel[0] = -5;
+          vel[1] = 0;
+          if (pos[0] - start[0] <= 0) {
+            d = 3
+          }
+        }else {
+          vel[0] == 0;
+          vel[1] == -5;
+          if (pos[1] - start[1] <= 0) {
+            d = 0
+          }
+        }
+        break;
     }
   }
+  //back in the main part
 }
