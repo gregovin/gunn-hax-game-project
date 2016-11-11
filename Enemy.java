@@ -1,4 +1,4 @@
-class enemy {
+class Enemy {
   int motion_type;
   int skin;
   double pos[] = double[2];
