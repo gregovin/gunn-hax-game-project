@@ -11,7 +11,7 @@ class player {
     pos[0] = pos[0] + vel[0];
     pos[1] = pos[1] + vel[1];
     arctan v = new arctan(vel[1], vel[2])
-    double rot = v
+    rot = v.get_result()
   }
   public double[] return_data(){
     double[] ls = new double[5];
