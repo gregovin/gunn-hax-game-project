@@ -13,6 +13,7 @@ class player {
   }
   public void rotate(){
     rotation = rotation + 0.1;
+  }
   public double[] return_data(){
     double[] ls = new double[5];
     ls[0] = pos[0];
@@ -20,6 +21,15 @@ class player {
     ls[2] = vel[1];
     ls[3] = vel[2];
     ls[4] = rot;
-    return ls
+    return ls;
+  }
+  public void velchange0(double val) {
+    if (vel[0]<10){
+      vel[0] = vel[0] + val;
+    }
+  }
+  public void velchange1(double val) {
+    if (vel[1] < 10) {
+      vel[1] = vel[1] + val
   }
 }
