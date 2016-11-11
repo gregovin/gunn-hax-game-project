@@ -36,13 +36,13 @@ class enemy {
         break;
       case 1:
         if (d==0){
-          vel[0] = 5;
+          vel[0] = 3;
           vel[1] = 0;
-          if (pos[0] - start[0] >= 20) {
+          if (pos[0] - start[0] >= 30) {
             d = 1;
           }
         }else{
-          vel[0] = -5;
+          vel[0] = -3;
           vel[1] = 0;
           if (pos[0] - start[0] <= 0) {
             d = 0;
@@ -52,13 +52,13 @@ class enemy {
       case 2:
         if (d==0){
           vel[0] = 0;
-          vel[1] = 5;
-          if (pos[1] - start[1] >= 20) {
+          vel[1] = 3;
+          if (pos[1] - start[1] >= 30) {
             d = 1;
           }
         }else{
           vel[0] = 0;
-          vel[1] = -5;
+          vel[1] = -3;
           if (pos[1] - start[1] <= 0) {
             d = 0;
           }
@@ -66,28 +66,55 @@ class enemy {
         break;
       case 3:
         if (d==0) {
-          vel[0] = 5;
+          vel[0] = 3;
           vel[1] = 0;
-          if (pos[0] - start[0] >= 20) {
+          if (pos[0] - start[0] >= 30) {
             d = 1;
           }
         }else if (d==1) {
           vel[0] = 0;
-          vel[1] = 5;
-          if (pos[1] - start[1] >= 20) {
+          vel[1] = 3;
+          if (pos[1] - start[1] >= 30) {
             d =2;
           }
         }else if (d==2) {
-          vel[0] = -5;
+          vel[0] = -3;
           vel[1] = 0;
           if (pos[0] - start[0] <= 0) {
             d = 3
           }
         }else {
           vel[0] == 0;
-          vel[1] == -5;
+          vel[1] == -3;
           if (pos[1] - start[1] <= 0) {
             d = 0
+          }
+        }
+        break;
+      case 4:
+        if (d==1) {
+          vel[0] = 3;
+          vel[1] = 0;
+          if (pos[0] - start[0] >= 30) {
+            d = 2;
+          }
+        }else if (d==0) {
+          vel[0] = 0;
+          vel[1] = 3;
+          if (pos[1] - start[1] >= 30) {
+            d =1;
+          }
+        }else if (d==3) {
+          vel[0] = -3;
+          vel[1] = 0;
+          if (pos[0] - start[0] <= 0) {
+            d = 0
+          }
+        }else {
+          vel[0] == 0;
+          vel[1] == -3;
+          if (pos[1] - start[1] <= 0) {
+            d = 3
           }
         }
         break;
