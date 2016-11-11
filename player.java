@@ -1,4 +1,4 @@
-class player {
+class Player {
   private double pos[] = new double[2]
   private double vel[] = new double[2];
   private double rot;
@@ -22,12 +22,12 @@ class player {
     ls[4] = rot;
     return ls;
   }
-  public void velchange0(double val) {
+  public void velChange0(double val) {
     if (vel[0]<10){
       vel[0] = vel[0] + val;
     }
   }
-  public void velchange1(double val) {
+  public void velChange1(double val) {
     if (vel[1] < 10) {
       vel[1] = vel[1] + val
   }
