@@ -10,7 +10,7 @@ class player {
   public void update(){
     pos[0] = pos[0] + vel[0];
     pos[1] = pos[1] + vel[1];
-    arctan v = new arctan(vel[1], vel[2])
+    arctan v = new arctan(vel[1], vel[0])
     rot = v.get_result()
   }
   public double[] return_data(){
