@@ -8,9 +8,9 @@ class arctan {
     }else if (x==0 && y<0){
       storage = -math.PI/2
     }else if (y<0){
-      storage = -math.atan(-y/x)
+      storage = -Math.atan(-y/x)
     }else:
-      storage = math.atan(y/x)
+      storage = Math.atan(y/x)
   }
   public double get_result() {
     return storage
