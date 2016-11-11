@@ -7,5 +7,19 @@ class player {
     vel = vel1;
     rot = rot1;
   }
-  public 
+  public void update(){
+    pos[0] = pos[0] + vel[0];
+    pos[1] = pos[1] + vel[1];
+  }
+  public void rotate(){
+    rotation = rotation + 0.1;
+  public double[] return_data(){
+    double[] ls = new double[5];
+    ls[0] = pos[0];
+    ls[1] = pos[1];
+    ls[2] = vel[1];
+    ls[3] = vel[2];
+    ls[4] = rot;
+    return ls
+  }
 }
