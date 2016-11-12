@@ -25,6 +25,7 @@ class game {
       x = player.return_data()
       for (int i = 0; i<ls.len; i++) {
         ls[i].update()
+        ls[i].changeVel(x[0], x[1])
       }
     }
   }
