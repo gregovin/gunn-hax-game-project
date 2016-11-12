@@ -1,2 +1,4 @@
 # gunn-hax-game-project
-runs in java
+requires java
+
+is awesome
