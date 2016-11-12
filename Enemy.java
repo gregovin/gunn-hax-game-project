@@ -5,7 +5,7 @@ class Enemy {
   double vel[] = double[2];
   double rot;
   double start[] = double[2];
-  public enemy(int motion, int ski, double possitions[]) {
+  public Enemy(int motion, int ski, double possitions[]) {
     motion_type= motion;
     skin = ski;
     pos = possitions;
