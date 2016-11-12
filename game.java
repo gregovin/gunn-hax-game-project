@@ -22,7 +22,7 @@ class game {
         ls.add(Enimy(rand.nextInt(5),0,[rand.nextInt(400),rand.nextInt(400)]));
       }
       player.update()
-      x = player.getData()
+      x = player.return_data()
       for (int i = 0; i<ls.len; i++) {
         ls[i].update()
       }
